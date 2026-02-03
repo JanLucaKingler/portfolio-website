@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const portfolioDetails = document.querySelectorAll('.portfolio-detail');
         const maxIndex = portfolioDetails.length - 1;
 
-
         if (imgSlide) {
             imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
         }
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         portfolioDetails[index].classList.add('active');
 
-        // Navigation Buttons aktivieren/deaktivieren
         if (index === 0) {
             arrowLeft.classList.add('disabled');
         } else {
@@ -50,6 +48,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initiales Aktivieren
     activePortfolio();
 });
