@@ -41,7 +41,7 @@
 
     <nav class="navbar">
         <a href="#home" class="no-hash active" data-target="home">Home</a>
-        <a href="#about" class="no-hash" data-target="about">About</a>
+        <a href="#about" class="no-hash" data-target="about">Über mich</a>
         <a href="#skills" class="no-hash" data-target="skills">Skills</a>
         <a href="#portfolio" class="no-hash" data-target="portfolio">Portfolio</a>
         <a href="#contact" class="no-hash" data-target="contact">Kontakt</a>
@@ -52,14 +52,14 @@
     <div class="home-content">
 
         <h1>Jan-Luca Kingler</h1>
-        <h3>Backend Developer</h3>
-        <p>Hi, ich bin Luca, 21 Jahre alt und in der Ausbildung als Anwendungsentwickler. Momentan sammle ich praktische
+        <h3>Backend-Entwickler</h3>
+        <p>Hi, ich bin Luca, 22 Jahre alt und in der Ausbildung als Anwendungsentwickler. Momentan sammle ich praktische
             Erfahrungen und probiere gern neue Technologien aus. Ich bin immer auf der Suche nach spannenden Projekten,
             bei denen ich mich einbringen kann.</p>
 
         <div class="btn-box">
-            <a class="no-hash btn" data-target="about">About Me</a>
-            <a class="no-hash btn" data-target="contact">Lets Talk</a>
+            <a class="no-hash btn" data-target="about">Über mich</a>
+            <a class="no-hash btn" data-target="contact">Kontakt</a>
         </div>
     </div>
     <div class="home-sci">
@@ -74,7 +74,7 @@
     <div class="profile-wrapper">
         <div class="profile">
             <div class="entry"><i class="fas fa-user"></i>Jan-Luca Kingler</div>
-            <div class="entry"><i class="fas fa-calendar"></i>21 Jahre alt</div>
+            <div class="entry"><i class="fas fa-calendar"></i>22 Jahre alt</div>
             <div class="entry"><i class="fas fa-envelope"></i> janlucakingler@gmail.com</div>
             <div class="entry"><i class="fa-solid fa-briefcase"></i>In der Ausbildung als Softwareentwickler</div>
             <div class="entry"><i class="fa-solid fa-person"></i>Teamfähig, detailverliebt und humorvoll</div>
@@ -333,12 +333,6 @@
                     <div class="img-item">
                         <img src="assets/img/portfolio.png" loading="lazy" alt="">
                     </div>
-                    <div class="img-item">
-                        <img src="" loading="lazy" alt="">
-                    </div>
-                    <div class="img-item">
-                        <img src="" loading="lazy" alt="">
-                    </div>
                 </div>
             </div>
             <div class="navigation">
@@ -353,48 +347,39 @@
 <section id="contact" class="contact">
     <h2 class="section-title">Kontakt</h2>
 
-    <div class="contact-container">
-        <div class="contact-left">
-            <h2>Kontaktiere mich:</h2>
-            <p>Email: <a href="mailto:janlucakingler@gmail.com" class="email-link">janlucakingler@gmail.com</a></p>
-            <div class="social-icons">
-                <a href="https://de.linkedin.com/in/janlucakingler" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/JanLucaKingler" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
+    <section class="contact-section">
+        <p class="subtitle">
+            Interesse an einer Zusammenarbeit oder einem Austausch? Schreib mir gern.
+        </p>
+
+        <div class="contact-cards">
+            <a href="https://www.linkedin.com/in/janlucakingler/" target="_blank" class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                <h3>LinkedIn</h3>
+                <span>Vernetze dich mit mir</span>
+            </a>
+
+            <a href="https://hyperskill.org/my-learning/620900840" target="_blank" class="card">
+                <img src="assets/icons/hyperskill.png" alt="Hyperskill">
+                <h3>Hyperskill</h3>
+                <span>Meine Lern- & Projektpfade</span>
+            </a>
+
+            <a href="mailto:janlucakingler@gmail.com" class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+                <h3>E-Mail</h3>
+                <span>Direkt anschreiben</span>
+            </a>
         </div>
 
-        <div class="contact-right">
-            <form name="submit-to-google-sheet">
-                <label>
-                    <input type="text" name="name" placeholder="Dein Name" autocomplete="name" required>
-                </label>
-                <label>
-                    <input type="email" name="email" placeholder="Deine Email" autocomplete="email" required>
-                </label>
-                <label>
-                    <textarea placeholder="Deine Nachricht an mich" name="message" required></textarea>
-                </label>
-                <label>
-                    <input type="text" name="website" style="display:none">
-                </label>
-                <button type="submit">Senden</button>
-            </form>
-            <span id="msg"></span>
-        </div>
-    </div>
+        <a href="mailto:janlucakingler@gmail.com" class="email-button">
+            ✉️ janlucakingler@gmail.com
+        </a>
+    </section>
 
 </section>
-
 <footer>
-    <ul class="footer-nav">
-        <li><a href="#" class="no-hash" data-target="home">Home</a></li>
-        <li><a href="#" class="no-hash" data-target="about">About</a></li>
-        <li><a href="#" class="no-hash" data-target="skills">Skills</a></li>
-        <li><a href="#" class="no-hash" data-target="portfolio">Portfolio</a></li>
-        <li><a href="#" class="no-hash" data-target="contact">Kontakt</a></li>
-    </ul>
-    <p>© Jan-Luca Kingler 2025<br>Icons by - Flaticon, Icon8, Boxicons</p>
+    <p>© Jan-Luca Kingler 2026</p>
 
 </footer>
 <script src="scripts/theme/header.js"></script>
