@@ -80,27 +80,6 @@ footer {
 footer p {
     margin-top: 15px;
 }
-
-.footer-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.footer-nav li a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.footer-nav li a:hover {
-    text-decoration: underline;
-}
-
 /*------------------Mobile------------------*/
 @media (max-width: 768px) {
     nav ul {
