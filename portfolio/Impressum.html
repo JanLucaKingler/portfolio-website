@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+    <style>
+        :root {
+            --firstColor: #1e1f22;
+            --secondColor: #2b2d30;
+            --eyeCatchColor: #48EDDD;
+            --textColor: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            color: var(--textColor);
+        }
+
+        body {
+            background-color: var(--firstColor);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header/Navbar */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: .3s;
+        }
+
+        .header.sticky {
+            background-color: var(--firstColor);
+        }
+
+        .logo {
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 35px;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--eyeCatchColor);
+        }
+
+        /* Mobile Burger Menu */
+        #menu-icon {
+            display: none;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: -100%;
+                flex-direction: column;
+                background: var(--firstColor);
+                width: 100%;
+                padding: 1rem 0;
+                transition: .3s ease;
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+
+            #menu-icon {
+                display: block;
+                color: var(--textColor);
+            }
+
+            .navbar a {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+
+        /* Content Container */
+        .impressum-container {
+            background-color: var(--secondColor);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 800px;
+            width: 90%;
+            margin: 120px auto 60px auto; /* Abstand wegen Fixed Header */
+        }
+
+        .impressum-container h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--eyeCatchColor);
+            text-align: center;
+        }
+
+        .impressum-container h3 {
+            font-size: 1.5rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--eyeCatchColor);
+        }
+
+        .impressum-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .impressum-container a {
+            color: var(--eyeCatchColor);
+            text-decoration: none;
+        }
+
+        .impressum-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: var(--secondColor);
+            color: var(--textColor);
+            padding: 20px 0;
+        }
+
+        /* Mobile Anpassung */
+        @media (max-width: 480px) {
+            .impressum-container h2 {
+                font-size: 2.5rem;
+            }
+
+            .impressum-container h3 {
+                font-size: 1.3rem;
+            }
+
+            .impressum-container p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">Kingler.</a>
+    <div class='bx bx-menu' id="menu-icon">&#9776;</div>
+    <nav class="navbar">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">Über mich</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#contact">Kontakt</a>
+    </nav>
+</header>
+
+<div class="impressum-container">
+    <h2>Impressum</h2>
+
+    <p><strong>Angaben gemäß § 5 TMG</strong></p>
+    <p>
+        Jan-Luca Kingler<br>
+        E-Mail: <a href="mailto:janlucakingler@gmail.com">janlucakingler@gmail.com</a>
+    </p>
+
+    <h3>Haftung für Inhalte</h3>
+    <p>
+        Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt.
+        Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+        Diese Website dient ausschließlich der Vernetzung und enthält keine kommerziellen Inhalte.
+    </p>
+
+    <h3>Haftung für Links</h3>
+    <p>
+        Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
+    </p>
+
+    <h3>Urheberrecht</h3>
+    <p>
+        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
+        Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+    </p>
+</div>
+
+<footer>
+    &copy; 2026 Jan-Luca Kingler
+</footer>
+
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+
+    menuIcon?.addEventListener('click', () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        header.classList.toggle('sticky', window.scrollY > 100);
+    });
+</script>
+
+</body>
+</html>
