@@ -9,10 +9,13 @@ menuIcon?.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-    let top = window.scrollY;
+
+    let header = document.querySelector('header');
+    let headerHeight = header ? header.offsetHeight : 0;
+    let top = window.scrollY + headerHeight + 10;
 
     sections.forEach(sec => {
-        let offset = sec.offsetTop - 100;
+        let offset = sec.offsetTop;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
@@ -26,8 +29,7 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    let header = document.querySelector('header');
-    if (header) header.classList.toggle('sticky', window.scrollY > 100);
+    header?.classList.toggle('sticky', window.scrollY > 100);
 
     menuIcon?.classList.remove('bx-x');
     navbar?.classList.remove('active');

@@ -1,16 +1,16 @@
 #about {
     background-color: var(--secondColor);
     height: auto;
-    scroll-margin-top: 69px;
 }
 
 .about-me {
-    margin-top: 60px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 16px;
     color: var(--textColor);
 }
@@ -127,6 +127,11 @@
     padding-bottom: 40px;
 }
 
+/* GLOBALER Anchor Offset für fixed Header */
+section {
+    scroll-margin-top: 90px;
+}
+
 /*------------------Desktop / große Bildschirme------------------*/
 @media (min-width: 769px) {
     #about {
@@ -148,12 +153,12 @@
     .text-image img {
         max-width: 100px;
     }
-
 }
 
 /*------------------Tablets / Mobile------------------*/
 @media (max-width: 768px) {
-    #about {
+
+    section {
         scroll-margin-top: 112px;
     }
 
@@ -174,7 +179,6 @@
         gap: 20px;
         width: 100%;
     }
-
 
     .entry {
         display: flex;
