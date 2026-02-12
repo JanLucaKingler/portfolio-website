@@ -25,7 +25,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Header/Navbar */
         .header {
             position: fixed;
             top: 0;
@@ -68,7 +67,6 @@
             color: var(--eyeCatchColor);
         }
 
-        /* Mobile Burger Menu */
         #menu-icon {
             display: none;
             font-size: 3rem;
@@ -102,7 +100,6 @@
             }
         }
 
-        /* Content Container */
         .privacy-container {
             background-color: var(--secondColor);
             padding: 40px;
@@ -111,7 +108,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             max-width: 700px;
             width: 90%;
-            margin: 120px auto 60px auto; /* Abstand wegen Fixed Header */
+            margin: 120px auto 60px auto;
         }
 
         .privacy-container h2 {
@@ -143,12 +140,31 @@
             text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             background-color: var(--secondColor);
             color: var(--textColor);
             padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .privacy-container {
+                padding: 20px;
+                margin: 100px 15px 40px 15px;
+            }
+
+            .privacy-container h2 {
+                font-size: 2rem;
+            }
+
+            .privacy-container h3 {
+                font-size: 1.2rem;
+            }
+
+            .privacy-container p {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
