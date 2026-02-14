@@ -1,28 +1,33 @@
-let menuIcon = document.getElementById('menu-icon');
-let navbar = document.querySelector('.navbar');
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+const menuIcon = document.getElementById('menu-icon');
+const navbar = document.querySelector('.navbar');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+const header = document.querySelector('header');
+
+/* =========================
+   Mobile Menu Toggle
+========================= */
 
 menuIcon?.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 });
 
+/* =========================
+   Scroll Active Navigation
+========================= */
+
 window.addEventListener('scroll', () => {
 
-    let header = document.querySelector('header');
-    let headerHeight = header ? header.offsetHeight : 0;
-    let top = window.scrollY + headerHeight + 10;
-
     sections.forEach(sec => {
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+        const rect = sec.getBoundingClientRect();
+        const id = sec.getAttribute('id');
 
-        if (top >= offset && top < offset + height) {
+        if (rect.top <= 120 && rect.bottom >= 120) {
+
             navLinks.forEach(link => link.classList.remove('active'));
 
-            let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
+            const activeLink = document.querySelector(`header nav a[href="#${id}"]`);
             if (activeLink) {
                 activeLink.classList.add('active');
             }

@@ -3,31 +3,18 @@
     height: auto;
 }
 
+/* =========================
+   About Layout
+========================= */
+
 .about-me {
-    padding-top: 60px;
+    padding: 60px 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
     font-size: 16px;
     color: var(--textColor);
-}
-
-.myImage {
-    margin-right: 180px;
-    margin-bottom: 0;
-    width: 550px;
-    height: 750px;
-    image-rendering: smooth;
-}
-
-.text-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 650px;
 }
 
 .section-header {
@@ -36,12 +23,21 @@
     margin: 0;
 }
 
-.text-image.left .text-content {
-    text-align: left;
+.about-second-header {
+    text-align: center;
+    color: var(--eyeCatchColor);
+    font-size: 20px;
 }
 
-.text-image.right .text-content {
-    text-align: right;
+/* =========================
+   Text + Image Blockså
+========================= */
+
+.text-image {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
 }
 
 .text-image.left {
@@ -52,6 +48,42 @@
     flex-direction: row-reverse;
 }
 
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+}
+
+.text-image.left .text-content {
+    text-align: left;
+}
+
+.text-image.right .text-content {
+    text-align: right;
+}
+
+.text-image img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.text-image.left img,
+.text-image.right img {
+    width: 200px;
+}
+
+.text-image p {
+    text-align: justify;
+    line-height: 1.7;
+    padding-bottom: 40px;
+}
+
+/* =========================
+   Header Content
+========================= */
+
 .header-content {
     display: flex;
     align-items: flex-start;
@@ -59,11 +91,17 @@
     gap: 40px;
 }
 
-.about-second-header {
-    text-align: center;
-    color: var(--eyeCatchColor);
-    font-size: 20px;
+.myImage {
+    margin-right: 180px;
+    margin-bottom: 0;
+    width: 550px;
+    height: 750px;
+    image-rendering: smooth;
 }
+
+/* =========================
+   Profile Section
+========================= */
 
 .profile-wrapper {
     margin-top: 50px;
@@ -96,50 +134,28 @@
     font-size: 25px;
 }
 
-.text-image {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    max-width: 900px;
-    flex-direction: row;
-    text-align: left;
-}
+/* =========================
+   Global Anchor Offset
+========================= */
 
-.text-image img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    order: 0;
-}
-
-.text-image.left img {
-    order: 0;
-    width: 200px;
-}
-
-.text-image.right img {
-    width: 200px;
-}
-
-.text-image p {
-    text-align: justify;
-    line-height: 1.7;
-    padding-bottom: 40px;
-}
-
-/* GLOBALER Anchor Offset für fixed Header */
 section {
     scroll-margin-top: 90px;
 }
 
-/*------------------Desktop / große Bildschirme------------------*/
+/* =========================
+   Desktop / Large Screens
+========================= */
+
 @media (min-width: 769px) {
     #about {
         min-height: 145vh;
     }
 }
 
-/*------------------Große Laptops / Tablets------------------*/
+/* =========================
+   Large Laptops / Tablets
+========================= */
+
 @media (max-width: 1520px) {
     #about {
         padding-bottom: 60px;
@@ -155,7 +171,10 @@ section {
     }
 }
 
-/*------------------Tablets / Mobile------------------*/
+/* =========================
+   Tablets / Mobile
+========================= */
+
 @media (max-width: 768px) {
 
     section {
@@ -163,17 +182,12 @@ section {
     }
 
     .profile-wrapper {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 20px;
         width: 100%;
     }
 
     .profile {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         padding-left: 0;
         gap: 20px;
@@ -181,17 +195,10 @@ section {
     }
 
     .entry {
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
         text-align: center;
-    }
-
-    .entry i {
-        width: 30px;
-        text-align: center;
-        font-size: 25px;
     }
 
     .text-image,
@@ -212,7 +219,6 @@ section {
     }
 
     .about-me {
-        font-size: 16px;
         gap: 30px;
     }
 }

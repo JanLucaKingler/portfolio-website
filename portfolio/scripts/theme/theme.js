@@ -27,7 +27,7 @@ document.querySelectorAll('.section-title').forEach(el => observer.observe(el));
 /*------------------Hash-URL entfernen------------------*/
 document.querySelectorAll('a.no-hash').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault(); // Verhindert den Hash in der URL
+        e.preventDefault();
         const targetId = this.getAttribute('data-target');
         const targetEl = document.getElementById(targetId);
         if (targetEl) {

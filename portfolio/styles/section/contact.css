@@ -1,9 +1,17 @@
+/* =========================
+   Global Reset
+========================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Inter", system-ui, sans-serif;
 }
+
+/* =========================
+   Contact Section Layout
+========================= */
 
 .contact-section {
     max-width: 1100px;
@@ -22,6 +30,10 @@
     color: var(--textColor);
     margin-bottom: 50px;
 }
+
+/* =========================
+   Contact Cards Grid
+========================= */
 
 .contact-cards {
     display: grid;
@@ -60,6 +72,10 @@
     color: var(--eyeCatchColor);
 }
 
+/* =========================
+   Email Button
+========================= */
+
 .email-button {
     display: inline-flex;
     align-items: center;
@@ -71,7 +87,7 @@
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease;
 }
 
 .email-button:hover {
